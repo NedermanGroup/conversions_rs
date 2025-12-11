@@ -1,7 +1,7 @@
 [package]
 name = "conversions_rs"
 version = "1.2.1"
-edition = "2021"
+edition = "2024"
 description = "A comprehensive unit conversion library, CLI tool, and WebAssembly module with full SI (International System of Units) support"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/RK1PF/conversions_rs"
@@ -11,18 +11,8 @@ readme = "README.md"
 keywords = ["conversion", "units", "measurement", "wasm", "SI"]
 categories = ["command-line-utilities", "science", "mathematics", "wasm"]
 authors = ["Raihau GRAFFE <graffe.raihau@gmail.com>"]
-rust-version = "1.70.0"
-exclude = [
-    ".github/",
-    "target/",
-    "examples/",
-    "*.md",
-    "Cargo.lock",
-]
-
-[[bin]]
-name = "conversions_rs"
-path = "src/main.rs"
+rust-version = "1.91.1"
+exclude = [".github/", "target/", "examples/", "*.md", "Cargo.lock"]
 
 [lib]
 name = "conversions_rs"
@@ -30,8 +20,6 @@ path = "src/lib.rs"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-clap = { version = "=4.4.0", features = ["derive"] }
-
 # WASM dependencies
 wasm-bindgen = { version = "0.2", optional = true }
 web-sys = { version = "0.3", optional = true }

@@ -312,7 +312,7 @@ pub fn convert_luminous_intensity(
             return Err(format!(
                 "Unsupported luminous intensity unit: {}",
                 from_unit
-            ))
+            ));
         }
     };
 

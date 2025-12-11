@@ -294,7 +294,7 @@ pub fn convert_temperature(value: f64, from: &str, to: &str) -> Result<f64, Stri
             return Err(format!(
                 "Unknown temperature conversion: {} to {}",
                 from, to
-            ))
+            ));
         }
     };
 
