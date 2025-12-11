@@ -169,20 +169,20 @@
                 <div class="converter">
                     <input type="number" id="length-value" placeholder="Enter value" value="100">
                     <select id="length-from">
-                        <option value="m">Meters</option>
-                        <option value="km">Kilometers</option>
-                        <option value="cm">Centimeters</option>
-                        <option value="mm">Millimeters</option>
+                        <option value="m">Metres</option>
+                        <option value="km">Kilometres</option>
+                        <option value="cm">Centimetres</option>
+                        <option value="mm">Millimetres</option>
                         <option value="ft" selected>Feet</option>
                         <option value="in">Inches</option>
                         <option value="yd">Yards</option>
                         <option value="mi">Miles</option>
                     </select>
                     <select id="length-to">
-                        <option value="m" selected>Meters</option>
-                        <option value="km">Kilometers</option>
-                        <option value="cm">Centimeters</option>
-                        <option value="mm">Millimeters</option>
+                        <option value="m" selected>Metres</option>
+                        <option value="km">Kilometres</option>
+                        <option value="cm">Centimetres</option>
+                        <option value="mm">Millimetres</option>
                         <option value="ft">Feet</option>
                         <option value="in">Inches</option>
                         <option value="yd">Yards</option>
@@ -307,9 +307,9 @@
                 <div class="converter">
                     <input type="number" id="area-value" placeholder="Enter value" value="10000">
                     <select id="area-from">
-                        <option value="m²" selected>Square Meters</option>
-                        <option value="km²">Square Kilometers</option>
-                        <option value="cm²">Square Centimeters</option>
+                        <option value="m²" selected>Square Metres</option>
+                        <option value="km²">Square Kilometres</option>
+                        <option value="cm²">Square Centimetres</option>
                         <option value="ha">Hectares</option>
                         <option value="acre">Acres</option>
                         <option value="ft²">Square Feet</option>
@@ -318,9 +318,9 @@
                         <option value="mi²">Square Miles</option>
                     </select>
                     <select id="area-to">
-                        <option value="m²">Square Meters</option>
-                        <option value="km²">Square Kilometers</option>
-                        <option value="cm²">Square Centimeters</option>
+                        <option value="m²">Square Metres</option>
+                        <option value="km²">Square Kilometres</option>
+                        <option value="cm²">Square Centimetres</option>
                         <option value="ha" selected>Hectares</option>
                         <option value="acre">Acres</option>
                         <option value="ft²">Square Feet</option>
@@ -353,7 +353,7 @@ await init();
 // Now you can use the conversion functions
 const result = convert_length_wasm(100, "ft", "m");
 if (result.success) {
-    console.log(`100 feet = ${result.value} meters`);
+    console.log(`100 feet = ${result.value} metres`);
 } else {
     console.error("Conversion failed:", result.error);
 }</code></pre>

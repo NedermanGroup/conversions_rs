@@ -10,7 +10,7 @@
 //! ## Features
 //!
 //! ### SI Base Units
-//! - **Length conversions**: meters, kilometers, feet, inches, yards, miles, etc.
+//! - **Length conversions**: metres, kilometres, feet, inches, yards, miles, etc.
 //! - **Mass conversions**: kilograms, grams, pounds, ounces, tons, stones
 //! - **Temperature conversions**: Celsius, Fahrenheit, Kelvin
 //! - **Time conversions**: seconds, minutes, hours, days, weeks, years, etc.
@@ -20,7 +20,7 @@
 //!
 //! ### SI Derived Units
 //! - **Volume conversions**: liters, gallons (US/UK), cups, pints, quarts, etc.
-//! - **Area conversions**: square meters, acres, hectares, square feet, etc.
+//! - **Area conversions**: square metres, acres, hectares, square feet, etc.
 //!
 //! ### Additional Features
 //! - **Case-insensitive unit names** with support for singular/plural forms
@@ -39,10 +39,10 @@
 //! use conversions_rs::conversions::*;
 //!
 //! // Length conversions - organized by source unit
-//! let feet = length::meters::to_feet(10.0);           // 32.8084 feet
+//! let feet = length::metres::to_feet(10.0);           // 32.8084 feet
 //! let inches = length::feet::to_inches(5.0);          // 60.0 inches  
-//! let cm = length::inches::to_centimeters(12.0);      // 30.48 cm
-//! let km = length::miles::to_kilometers(5.0);         // 8.0467 km
+//! let cm = length::inches::to_centimetres(12.0);      // 30.48 cm
+//! let km = length::miles::to_kilometres(5.0);         // 8.0467 km
 //!
 //! // Weight conversions
 //! let pounds = weight::kilograms::to_pounds(5.0);     // 11.0231 pounds
@@ -77,12 +77,12 @@
 //! let hefnerkerze = luminous_intensity::candela::to_hefnerkerze(1.0);    // 1.11 hk
 //!
 //! // Area conversions (NEW SI DERIVED UNIT)
-//! let hectares = area::square_meters::to_hectares(10000.0);   // 1.0 ha
+//! let hectares = area::square_metres::to_hectares(10000.0);   // 1.0 ha
 //! let acres = area::hectares::to_acres(1.0);                  // 2.471 acres
-//! let sq_feet = area::square_meters::to_square_feet(1.0);     // 10.764 ft²
+//! let sq_feet = area::square_metres::to_square_feet(1.0);     // 10.764 ft²
 //!
 //! // Easy to chain conversions
-//! let result = length::meters::to_feet(length::kilometers::to_meters(1.0)); // 1 km to feet
+//! let result = length::metres::to_feet(length::kilometres::to_metres(1.0)); // 1 km to feet
 //! ```
 //!
 //! ### 2. General Conversion Functions (String-based)
@@ -93,8 +93,8 @@
 //! use conversions_rs::*;
 //!
 //! // Length conversions
-//! let meters = convert_length(100.0, "ft", "m").unwrap();
-//! println!("100 feet = {:.2} meters", meters);
+//! let metres = convert_length(100.0, "ft", "m").unwrap();
+//! println!("100 feet = {:.2} metres", metres);
 //!
 //! // Weight conversions
 //! let pounds = convert_weight(5.0, "kg", "lb").unwrap();
@@ -134,7 +134,7 @@
 //! ```rust
 //! use conversions_rs::*;
 //!
-//! let feet = meters_to_feet(10.0);
+//! let feet = metres_to_feet(10.0);
 //! let kg = pounds_to_kilograms(22.0);
 //! let fahrenheit = celsius_to_fahrenheit(25.0);
 //! ```
@@ -189,16 +189,16 @@ mod tests {
 
     #[test]
     fn test_length_conversions() {
-        // Test meter to feet
+        // Test metre to feet
         assert!((convert_length(1.0, "m", "ft").unwrap() - 3.28084).abs() < 0.0001);
 
-        // Test kilometer to meter
+        // Test kilometre to metre
         assert_eq!(convert_length(1.0, "km", "m").unwrap(), 1000.0);
 
-        // Test inch to centimeter
+        // Test inch to centimetre
         assert!((convert_length(1.0, "in", "cm").unwrap() - 2.54).abs() < 0.01);
 
-        // Test mile to kilometer
+        // Test mile to kilometre
         assert!((convert_length(1.0, "mi", "km").unwrap() - 1.60934).abs() < 0.001);
     }
 
@@ -247,16 +247,16 @@ mod tests {
     fn test_modular_length_api() {
         use crate::conversions::length::*;
 
-        // Test meters module
-        assert!((meters::to_feet(1.0) - 3.28084).abs() < 0.0001);
-        assert!((meters::to_inches(1.0) - 39.3701).abs() < 0.001);
+        // Test metres module
+        assert!((metres::to_feet(1.0) - 3.28084).abs() < 0.0001);
+        assert!((metres::to_inches(1.0) - 39.3701).abs() < 0.001);
 
         // Test feet module
-        assert!((feet::to_meters(1.0) - 0.3048).abs() < 0.0001);
+        assert!((feet::to_metres(1.0) - 0.3048).abs() < 0.0001);
         assert_eq!(feet::to_inches(1.0), 12.0);
 
         // Test chaining conversions
-        let km_to_feet = meters::to_feet(kilometers::to_meters(1.0));
+        let km_to_feet = metres::to_feet(kilometres::to_metres(1.0));
         assert!((km_to_feet - 3280.84).abs() < 0.1);
     }
 
@@ -341,16 +341,16 @@ mod tests {
 
     #[test]
     fn test_area_conversions() {
-        // Test square meters to square centimeters
+        // Test square metres to square centimetres
         assert_eq!(convert_area(1.0, "m²", "cm²").unwrap(), 10_000.0);
 
-        // Test square kilometers to square meters
+        // Test square kilometres to square metres
         assert_eq!(convert_area(1.0, "km²", "m²").unwrap(), 1_000_000.0);
 
-        // Test square meters to hectares
+        // Test square metres to hectares
         assert_eq!(convert_area(10_000.0, "m²", "ha").unwrap(), 1.0);
 
-        // Test acres to square meters
+        // Test acres to square metres
         assert!((convert_area(1.0, "ac", "m²").unwrap() - 4046.8564224).abs() < 0.001);
 
         // Test square feet to square inches (with floating-point tolerance)

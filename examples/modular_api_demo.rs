@@ -12,15 +12,15 @@ fn main() {
 
     // Length conversions using the modular API
     println!("📏 Length Conversions:");
-    println!("100 meters = {:.2} feet", length::meters::to_feet(100.0));
-    println!("6 feet = {:.2} meters", length::feet::to_meters(6.0));
+    println!("100 metres = {:.2} feet", length::metres::to_feet(100.0));
+    println!("6 feet = {:.2} metres", length::feet::to_metres(6.0));
     println!(
-        "1 mile = {:.2} kilometers",
-        length::miles::to_kilometers(1.0)
+        "1 mile = {:.2} kilometres",
+        length::miles::to_kilometres(1.0)
     );
     println!(
-        "50 centimeters = {:.1} inches",
-        length::centimeters::to_inches(50.0)
+        "50 centimetres = {:.1} inches",
+        length::centimetres::to_inches(50.0)
     );
     println!();
 
@@ -144,21 +144,21 @@ fn main() {
     // Area conversions using the modular API (NEW SI DERIVED UNIT)
     println!("📐 Area Conversions:");
     println!(
-        "10000 square meters = {:.1} hectares",
-        area::square_meters::to_hectares(10000.0)
+        "10000 square metres = {:.1} hectares",
+        area::square_metres::to_hectares(10000.0)
     );
     println!("1 hectare = {:.2} acres", area::hectares::to_acres(1.0));
     println!(
-        "1 square kilometer = {:.0} square meters",
-        area::square_kilometers::to_square_meters(1.0)
+        "1 square kilometre = {:.0} square metres",
+        area::square_kilometres::to_square_metres(1.0)
     );
     println!(
         "144 square inches = {:.0} square feet",
         area::square_inches::to_square_feet(144.0)
     );
     println!(
-        "1 acre = {:.0} square meters",
-        area::acres::to_square_meters(1.0)
+        "1 acre = {:.0} square metres",
+        area::acres::to_square_metres(1.0)
     );
     println!();
 

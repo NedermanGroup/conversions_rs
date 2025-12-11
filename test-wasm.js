@@ -14,7 +14,7 @@ console.log('🔄 Testing Conversions RS WASM Module\n');
 console.log('📏 Length Conversions:');
 const lengthResult = convert_length_wasm(100, "ft", "m");
 if (lengthResult.success) {
-    console.log(`✅ 100 feet = ${lengthResult.value.toFixed(4)} meters`);
+    console.log(`✅ 100 feet = ${lengthResult.value.toFixed(4)} metres`);
 } else {
     console.log(`❌ Error: ${lengthResult.error}`);
 }

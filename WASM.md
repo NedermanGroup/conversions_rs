@@ -73,7 +73,7 @@ node test-wasm.js
             
             const result = convert_length_wasm(100, "ft", "m");
             if (result.success) {
-                console.log(`100 feet = ${result.value} meters`);
+                console.log(`100 feet = ${result.value} metres`);
             }
         }
         
@@ -93,7 +93,7 @@ const { convert_length_wasm } = require('./pkg/nodejs/conversions_rs.js');
 
 const result = convert_length_wasm(100, "ft", "m");
 if (result.success) {
-    console.log(`100 feet = ${result.value} meters`);
+    console.log(`100 feet = ${result.value} metres`);
 } else {
     console.error("Error:", result.error);
 }
@@ -120,7 +120,7 @@ function Converter() {
         
         const conversionResult = wasm.convert_length_wasm(100, "ft", "m");
         if (conversionResult.success) {
-            setResult(`100 feet = ${conversionResult.value.toFixed(4)} meters`);
+            setResult(`100 feet = ${conversionResult.value.toFixed(4)} metres`);
         } else {
             setResult(`Error: ${conversionResult.error}`);
         }
@@ -129,7 +129,7 @@ function Converter() {
     return (
         <div>
             <button onClick={handleConvert} disabled={!wasm}>
-                Convert 100ft to meters
+                Convert 100ft to metres
             </button>
             {result && <p>{result}</p>}
         </div>
@@ -200,7 +200,7 @@ const lengthUnits = get_supported_units("length");
 
 ## Supported Unit Types
 
-- `"length"` - meters, feet, inches, etc.
+- `"length"` - metres, feet, inches, etc.
 - `"weight"` or `"mass"` - kilograms, pounds, etc.
 - `"temperature"` - Celsius, Fahrenheit, Kelvin
 - `"volume"` - liters, gallons, etc.
@@ -208,7 +208,7 @@ const lengthUnits = get_supported_units("length");
 - `"current"` - amperes, milliamperes, etc.
 - `"substance"` - moles, millimoles, etc.
 - `"luminous_intensity"` - candela, millicandela, etc.
-- `"area"` - square meters, acres, etc.
+- `"area"` - square metres, acres, etc.
 
 ## Browser Support
 

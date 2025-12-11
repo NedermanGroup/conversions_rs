@@ -1,265 +1,265 @@
 //! Area conversion functions organized by unit type
-//! All conversions use square meters as the base unit for accuracy and consistency
+//! All conversions use square metres as the base unit for accuracy and consistency
 
-/// Square meters conversion functions
-pub mod square_meters {
-    /// Converts square meters to square millimeters.
+/// Square metres conversion functions
+pub mod square_metres {
+    /// Converts square metres to square millimetres.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
+    /// * `value` - The area in square metres to convert
+    pub fn to_square_millimetres(value: f64) -> f64 {
         value * 1_000_000.0
     }
 
-    /// Converts square meters to square centimeters.
+    /// Converts square metres to square centimetres.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
+    /// * `value` - The area in square metres to convert
+    pub fn to_square_centimetres(value: f64) -> f64 {
         value * 10_000.0
     }
 
-    /// Converts square meters to square kilometers.
+    /// Converts square metres to square kilometres.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
+    /// * `value` - The area in square metres to convert
+    pub fn to_square_kilometres(value: f64) -> f64 {
         value / 1_000_000.0
     }
 
-    /// Converts square meters to square inches.
+    /// Converts square metres to square inches.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
+    /// * `value` - The area in square metres to convert
     pub fn to_square_inches(value: f64) -> f64 {
         value * 1550.0031
     }
 
-    /// Converts square meters to square feet.
+    /// Converts square metres to square feet.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
+    /// * `value` - The area in square metres to convert
     pub fn to_square_feet(value: f64) -> f64 {
         value * 10.763910417
     }
 
-    /// Converts square meters to square yards.
+    /// Converts square metres to square yards.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
+    /// * `value` - The area in square metres to convert
     pub fn to_square_yards(value: f64) -> f64 {
         value * 1.1959900463
     }
 
-    /// Converts square meters to acres.
+    /// Converts square metres to acres.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
+    /// * `value` - The area in square metres to convert
     pub fn to_acres(value: f64) -> f64 {
         value / 4046.8564224
     }
 
-    /// Converts square meters to hectares.
+    /// Converts square metres to hectares.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
+    /// * `value` - The area in square metres to convert
     pub fn to_hectares(value: f64) -> f64 {
         value / 10_000.0
     }
 
-    /// Converts square meters to square miles.
+    /// Converts square metres to square miles.
     /// # Arguments
-    /// * `value` - The area in square meters to convert
+    /// * `value` - The area in square metres to convert
     pub fn to_square_miles(value: f64) -> f64 {
         value / 2_589_988.110336
     }
 }
 
-/// Square millimeters conversion functions
-pub mod square_millimeters {
-    /// Converts square millimeters to square meters.
+/// Square millimetres conversion functions
+pub mod square_millimetres {
+    /// Converts square millimetres to square metres.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    /// * `value` - The area in square millimetres to convert
+    pub fn to_square_metres(value: f64) -> f64 {
         value / 1_000_000.0
     }
 
-    /// Converts square millimeters to square centimeters.
+    /// Converts square millimetres to square centimetres.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
+    /// * `value` - The area in square millimetres to convert
+    pub fn to_square_centimetres(value: f64) -> f64 {
         value / 100.0
     }
 
-    /// Converts square millimeters to square kilometers.
+    /// Converts square millimetres to square kilometres.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
-        super::square_meters::to_square_kilometers(to_square_meters(value))
+    /// * `value` - The area in square millimetres to convert
+    pub fn to_square_kilometres(value: f64) -> f64 {
+        super::square_metres::to_square_kilometres(to_square_metres(value))
     }
 
-    /// Converts square millimeters to square inches.
+    /// Converts square millimetres to square inches.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
+    /// * `value` - The area in square millimetres to convert
     pub fn to_square_inches(value: f64) -> f64 {
-        super::square_meters::to_square_inches(to_square_meters(value))
+        super::square_metres::to_square_inches(to_square_metres(value))
     }
 
-    /// Converts square millimeters to square feet.
+    /// Converts square millimetres to square feet.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
+    /// * `value` - The area in square millimetres to convert
     pub fn to_square_feet(value: f64) -> f64 {
-        super::square_meters::to_square_feet(to_square_meters(value))
+        super::square_metres::to_square_feet(to_square_metres(value))
     }
 
-    /// Converts square millimeters to square yards.
+    /// Converts square millimetres to square yards.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
+    /// * `value` - The area in square millimetres to convert
     pub fn to_square_yards(value: f64) -> f64 {
-        super::square_meters::to_square_yards(to_square_meters(value))
+        super::square_metres::to_square_yards(to_square_metres(value))
     }
 
-    /// Converts square millimeters to acres.
+    /// Converts square millimetres to acres.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
+    /// * `value` - The area in square millimetres to convert
     pub fn to_acres(value: f64) -> f64 {
-        super::square_meters::to_acres(to_square_meters(value))
+        super::square_metres::to_acres(to_square_metres(value))
     }
 
-    /// Converts square millimeters to hectares.
+    /// Converts square millimetres to hectares.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
+    /// * `value` - The area in square millimetres to convert
     pub fn to_hectares(value: f64) -> f64 {
-        super::square_meters::to_hectares(to_square_meters(value))
+        super::square_metres::to_hectares(to_square_metres(value))
     }
 
-    /// Converts square millimeters to square miles.
+    /// Converts square millimetres to square miles.
     /// # Arguments
-    /// * `value` - The area in square millimeters to convert
+    /// * `value` - The area in square millimetres to convert
     pub fn to_square_miles(value: f64) -> f64 {
-        super::square_meters::to_square_miles(to_square_meters(value))
+        super::square_metres::to_square_miles(to_square_metres(value))
     }
 }
 
-/// Square centimeters conversion functions
-pub mod square_centimeters {
-    /// Converts square centimeters to square meters.
+/// Square centimetres conversion functions
+pub mod square_centimetres {
+    /// Converts square centimetres to square metres.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    /// * `value` - The area in square centimetres to convert
+    pub fn to_square_metres(value: f64) -> f64 {
         value / 10_000.0
     }
 
-    /// Converts square centimeters to square millimeters.
+    /// Converts square centimetres to square millimetres.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
+    /// * `value` - The area in square centimetres to convert
+    pub fn to_square_millimetres(value: f64) -> f64 {
         value * 100.0
     }
 
-    /// Converts square centimeters to square kilometers.
+    /// Converts square centimetres to square kilometres.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
-        super::square_meters::to_square_kilometers(to_square_meters(value))
+    /// * `value` - The area in square centimetres to convert
+    pub fn to_square_kilometres(value: f64) -> f64 {
+        super::square_metres::to_square_kilometres(to_square_metres(value))
     }
 
-    /// Converts square centimeters to square inches.
+    /// Converts square centimetres to square inches.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
+    /// * `value` - The area in square centimetres to convert
     pub fn to_square_inches(value: f64) -> f64 {
         value * 0.15500031
     }
 
-    /// Converts square centimeters to square feet.
+    /// Converts square centimetres to square feet.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
+    /// * `value` - The area in square centimetres to convert
     pub fn to_square_feet(value: f64) -> f64 {
-        super::square_meters::to_square_feet(to_square_meters(value))
+        super::square_metres::to_square_feet(to_square_metres(value))
     }
 
-    /// Converts square centimeters to square yards.
+    /// Converts square centimetres to square yards.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
+    /// * `value` - The area in square centimetres to convert
     pub fn to_square_yards(value: f64) -> f64 {
-        super::square_meters::to_square_yards(to_square_meters(value))
+        super::square_metres::to_square_yards(to_square_metres(value))
     }
 
-    /// Converts square centimeters to acres.
+    /// Converts square centimetres to acres.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
+    /// * `value` - The area in square centimetres to convert
     pub fn to_acres(value: f64) -> f64 {
-        super::square_meters::to_acres(to_square_meters(value))
+        super::square_metres::to_acres(to_square_metres(value))
     }
 
-    /// Converts square centimeters to hectares.
+    /// Converts square centimetres to hectares.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
+    /// * `value` - The area in square centimetres to convert
     pub fn to_hectares(value: f64) -> f64 {
-        super::square_meters::to_hectares(to_square_meters(value))
+        super::square_metres::to_hectares(to_square_metres(value))
     }
 
-    /// Converts square centimeters to square miles.
+    /// Converts square centimetres to square miles.
     /// # Arguments
-    /// * `value` - The area in square centimeters to convert
+    /// * `value` - The area in square centimetres to convert
     pub fn to_square_miles(value: f64) -> f64 {
-        super::square_meters::to_square_miles(to_square_meters(value))
+        super::square_metres::to_square_miles(to_square_metres(value))
     }
 }
 
-/// Square kilometers conversion functions
-pub mod square_kilometers {
-    /// Converts square kilometers to square meters.
+/// Square kilometres conversion functions
+pub mod square_kilometres {
+    /// Converts square kilometres to square metres.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    /// * `value` - The area in square kilometres to convert
+    pub fn to_square_metres(value: f64) -> f64 {
         value * 1_000_000.0
     }
 
-    /// Converts square kilometers to square millimeters.
+    /// Converts square kilometres to square millimetres.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    /// * `value` - The area in square kilometres to convert
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts square kilometers to square centimeters.
+    /// Converts square kilometres to square centimetres.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
-        super::square_meters::to_square_centimeters(to_square_meters(value))
+    /// * `value` - The area in square kilometres to convert
+    pub fn to_square_centimetres(value: f64) -> f64 {
+        super::square_metres::to_square_centimetres(to_square_metres(value))
     }
 
-    /// Converts square kilometers to square inches.
+    /// Converts square kilometres to square inches.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
+    /// * `value` - The area in square kilometres to convert
     pub fn to_square_inches(value: f64) -> f64 {
-        super::square_meters::to_square_inches(to_square_meters(value))
+        super::square_metres::to_square_inches(to_square_metres(value))
     }
 
-    /// Converts square kilometers to square feet.
+    /// Converts square kilometres to square feet.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
+    /// * `value` - The area in square kilometres to convert
     pub fn to_square_feet(value: f64) -> f64 {
-        super::square_meters::to_square_feet(to_square_meters(value))
+        super::square_metres::to_square_feet(to_square_metres(value))
     }
 
-    /// Converts square kilometers to square yards.
+    /// Converts square kilometres to square yards.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
+    /// * `value` - The area in square kilometres to convert
     pub fn to_square_yards(value: f64) -> f64 {
-        super::square_meters::to_square_yards(to_square_meters(value))
+        super::square_metres::to_square_yards(to_square_metres(value))
     }
 
-    /// Converts square kilometers to acres.
+    /// Converts square kilometres to acres.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
+    /// * `value` - The area in square kilometres to convert
     pub fn to_acres(value: f64) -> f64 {
         value * 247.10538147
     }
 
-    /// Converts square kilometers to hectares.
+    /// Converts square kilometres to hectares.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
+    /// * `value` - The area in square kilometres to convert
     pub fn to_hectares(value: f64) -> f64 {
         value * 100.0
     }
 
-    /// Converts square kilometers to square miles.
+    /// Converts square kilometres to square miles.
     /// # Arguments
-    /// * `value` - The area in square kilometers to convert
+    /// * `value` - The area in square kilometres to convert
     pub fn to_square_miles(value: f64) -> f64 {
         value * 0.3861021585
     }
@@ -267,32 +267,32 @@ pub mod square_kilometers {
 
 /// Square inches conversion functions
 pub mod square_inches {
-    /// Converts square inches to square meters.
+    /// Converts square inches to square metres.
     /// # Arguments
     /// * `value` - The area in square inches to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    pub fn to_square_metres(value: f64) -> f64 {
         value / 1550.0031
     }
 
-    /// Converts square inches to square millimeters.
+    /// Converts square inches to square millimetres.
     /// # Arguments
     /// * `value` - The area in square inches to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts square inches to square centimeters.
+    /// Converts square inches to square centimetres.
     /// # Arguments
     /// * `value` - The area in square inches to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
+    pub fn to_square_centimetres(value: f64) -> f64 {
         value / 0.15500031
     }
 
-    /// Converts square inches to square kilometers.
+    /// Converts square inches to square kilometres.
     /// # Arguments
     /// * `value` - The area in square inches to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
-        super::square_meters::to_square_kilometers(to_square_meters(value))
+    pub fn to_square_kilometres(value: f64) -> f64 {
+        super::square_metres::to_square_kilometres(to_square_metres(value))
     }
 
     /// Converts square inches to square feet.
@@ -313,52 +313,52 @@ pub mod square_inches {
     /// # Arguments
     /// * `value` - The area in square inches to convert
     pub fn to_acres(value: f64) -> f64 {
-        super::square_meters::to_acres(to_square_meters(value))
+        super::square_metres::to_acres(to_square_metres(value))
     }
 
     /// Converts square inches to hectares.
     /// # Arguments
     /// * `value` - The area in square inches to convert
     pub fn to_hectares(value: f64) -> f64 {
-        super::square_meters::to_hectares(to_square_meters(value))
+        super::square_metres::to_hectares(to_square_metres(value))
     }
 
     /// Converts square inches to square miles.
     /// # Arguments
     /// * `value` - The area in square inches to convert
     pub fn to_square_miles(value: f64) -> f64 {
-        super::square_meters::to_square_miles(to_square_meters(value))
+        super::square_metres::to_square_miles(to_square_metres(value))
     }
 }
 
 /// Square feet conversion functions
 pub mod square_feet {
-    /// Converts square feet to square meters.
+    /// Converts square feet to square metres.
     /// # Arguments
     /// * `value` - The area in square feet to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    pub fn to_square_metres(value: f64) -> f64 {
         value / 10.763910417
     }
 
-    /// Converts square feet to square millimeters.
+    /// Converts square feet to square millimetres.
     /// # Arguments
     /// * `value` - The area in square feet to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts square feet to square centimeters.
+    /// Converts square feet to square centimetres.
     /// # Arguments
     /// * `value` - The area in square feet to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
-        super::square_meters::to_square_centimeters(to_square_meters(value))
+    pub fn to_square_centimetres(value: f64) -> f64 {
+        super::square_metres::to_square_centimetres(to_square_metres(value))
     }
 
-    /// Converts square feet to square kilometers.
+    /// Converts square feet to square kilometres.
     /// # Arguments
     /// * `value` - The area in square feet to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
-        super::square_meters::to_square_kilometers(to_square_meters(value))
+    pub fn to_square_kilometres(value: f64) -> f64 {
+        super::square_metres::to_square_kilometres(to_square_metres(value))
     }
 
     /// Converts square feet to square inches.
@@ -386,7 +386,7 @@ pub mod square_feet {
     /// # Arguments
     /// * `value` - The area in square feet to convert
     pub fn to_hectares(value: f64) -> f64 {
-        super::square_meters::to_hectares(to_square_meters(value))
+        super::square_metres::to_hectares(to_square_metres(value))
     }
 
     /// Converts square feet to square miles.
@@ -399,32 +399,32 @@ pub mod square_feet {
 
 /// Square yards conversion functions
 pub mod square_yards {
-    /// Converts square yards to square meters.
+    /// Converts square yards to square metres.
     /// # Arguments
     /// * `value` - The area in square yards to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    pub fn to_square_metres(value: f64) -> f64 {
         value / 1.1959900463
     }
 
-    /// Converts square yards to square millimeters.
+    /// Converts square yards to square millimetres.
     /// # Arguments
     /// * `value` - The area in square yards to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts square yards to square centimeters.
+    /// Converts square yards to square centimetres.
     /// # Arguments
     /// * `value` - The area in square yards to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
-        super::square_meters::to_square_centimeters(to_square_meters(value))
+    pub fn to_square_centimetres(value: f64) -> f64 {
+        super::square_metres::to_square_centimetres(to_square_metres(value))
     }
 
-    /// Converts square yards to square kilometers.
+    /// Converts square yards to square kilometres.
     /// # Arguments
     /// * `value` - The area in square yards to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
-        super::square_meters::to_square_kilometers(to_square_meters(value))
+    pub fn to_square_kilometres(value: f64) -> f64 {
+        super::square_metres::to_square_kilometres(to_square_metres(value))
     }
 
     /// Converts square yards to square inches.
@@ -452,7 +452,7 @@ pub mod square_yards {
     /// # Arguments
     /// * `value` - The area in square yards to convert
     pub fn to_hectares(value: f64) -> f64 {
-        super::square_meters::to_hectares(to_square_meters(value))
+        super::square_metres::to_hectares(to_square_metres(value))
     }
 
     /// Converts square yards to square miles.
@@ -465,31 +465,31 @@ pub mod square_yards {
 
 /// Acres conversion functions
 pub mod acres {
-    /// Converts acres to square meters.
+    /// Converts acres to square metres.
     /// # Arguments
     /// * `value` - The area in acres to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    pub fn to_square_metres(value: f64) -> f64 {
         value * 4046.8564224
     }
 
-    /// Converts acres to square millimeters.
+    /// Converts acres to square millimetres.
     /// # Arguments
     /// * `value` - The area in acres to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts acres to square centimeters.
+    /// Converts acres to square centimetres.
     /// # Arguments
     /// * `value` - The area in acres to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
-        super::square_meters::to_square_centimeters(to_square_meters(value))
+    pub fn to_square_centimetres(value: f64) -> f64 {
+        super::square_metres::to_square_centimetres(to_square_metres(value))
     }
 
-    /// Converts acres to square kilometers.
+    /// Converts acres to square kilometres.
     /// # Arguments
     /// * `value` - The area in acres to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
+    pub fn to_square_kilometres(value: f64) -> f64 {
         value / 247.10538147
     }
 
@@ -497,7 +497,7 @@ pub mod acres {
     /// # Arguments
     /// * `value` - The area in acres to convert
     pub fn to_square_inches(value: f64) -> f64 {
-        super::square_meters::to_square_inches(to_square_meters(value))
+        super::square_metres::to_square_inches(to_square_metres(value))
     }
 
     /// Converts acres to square feet.
@@ -531,31 +531,31 @@ pub mod acres {
 
 /// Hectares conversion functions
 pub mod hectares {
-    /// Converts hectares to square meters.
+    /// Converts hectares to square metres.
     /// # Arguments
     /// * `value` - The area in hectares to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    pub fn to_square_metres(value: f64) -> f64 {
         value * 10_000.0
     }
 
-    /// Converts hectares to square millimeters.
+    /// Converts hectares to square millimetres.
     /// # Arguments
     /// * `value` - The area in hectares to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts hectares to square centimeters.
+    /// Converts hectares to square centimetres.
     /// # Arguments
     /// * `value` - The area in hectares to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
-        super::square_meters::to_square_centimeters(to_square_meters(value))
+    pub fn to_square_centimetres(value: f64) -> f64 {
+        super::square_metres::to_square_centimetres(to_square_metres(value))
     }
 
-    /// Converts hectares to square kilometers.
+    /// Converts hectares to square kilometres.
     /// # Arguments
     /// * `value` - The area in hectares to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
+    pub fn to_square_kilometres(value: f64) -> f64 {
         value / 100.0
     }
 
@@ -563,21 +563,21 @@ pub mod hectares {
     /// # Arguments
     /// * `value` - The area in hectares to convert
     pub fn to_square_inches(value: f64) -> f64 {
-        super::square_meters::to_square_inches(to_square_meters(value))
+        super::square_metres::to_square_inches(to_square_metres(value))
     }
 
     /// Converts hectares to square feet.
     /// # Arguments
     /// * `value` - The area in hectares to convert
     pub fn to_square_feet(value: f64) -> f64 {
-        super::square_meters::to_square_feet(to_square_meters(value))
+        super::square_metres::to_square_feet(to_square_metres(value))
     }
 
     /// Converts hectares to square yards.
     /// # Arguments
     /// * `value` - The area in hectares to convert
     pub fn to_square_yards(value: f64) -> f64 {
-        super::square_meters::to_square_yards(to_square_meters(value))
+        super::square_metres::to_square_yards(to_square_metres(value))
     }
 
     /// Converts hectares to acres.
@@ -591,37 +591,37 @@ pub mod hectares {
     /// # Arguments
     /// * `value` - The area in hectares to convert
     pub fn to_square_miles(value: f64) -> f64 {
-        super::square_meters::to_square_miles(to_square_meters(value))
+        super::square_metres::to_square_miles(to_square_metres(value))
     }
 }
 
 /// Square miles conversion functions
 pub mod square_miles {
-    /// Converts square miles to square meters.
+    /// Converts square miles to square metres.
     /// # Arguments
     /// * `value` - The area in square miles to convert
-    pub fn to_square_meters(value: f64) -> f64 {
+    pub fn to_square_metres(value: f64) -> f64 {
         value * 2_589_988.110336
     }
 
-    /// Converts square miles to square millimeters.
+    /// Converts square miles to square millimetres.
     /// # Arguments
     /// * `value` - The area in square miles to convert
-    pub fn to_square_millimeters(value: f64) -> f64 {
-        super::square_meters::to_square_millimeters(to_square_meters(value))
+    pub fn to_square_millimetres(value: f64) -> f64 {
+        super::square_metres::to_square_millimetres(to_square_metres(value))
     }
 
-    /// Converts square miles to square centimeters.
+    /// Converts square miles to square centimetres.
     /// # Arguments
     /// * `value` - The area in square miles to convert
-    pub fn to_square_centimeters(value: f64) -> f64 {
-        super::square_meters::to_square_centimeters(to_square_meters(value))
+    pub fn to_square_centimetres(value: f64) -> f64 {
+        super::square_metres::to_square_centimetres(to_square_metres(value))
     }
 
-    /// Converts square miles to square kilometers.
+    /// Converts square miles to square kilometres.
     /// # Arguments
     /// * `value` - The area in square miles to convert
-    pub fn to_square_kilometers(value: f64) -> f64 {
+    pub fn to_square_kilometres(value: f64) -> f64 {
         value / 0.3861021585
     }
 
@@ -629,7 +629,7 @@ pub mod square_miles {
     /// # Arguments
     /// * `value` - The area in square miles to convert
     pub fn to_square_inches(value: f64) -> f64 {
-        super::square_meters::to_square_inches(to_square_meters(value))
+        super::square_metres::to_square_inches(to_square_metres(value))
     }
 
     /// Converts square miles to square feet.
@@ -657,49 +657,49 @@ pub mod square_miles {
     /// # Arguments
     /// * `value` - The area in square miles to convert
     pub fn to_hectares(value: f64) -> f64 {
-        super::square_meters::to_hectares(to_square_meters(value))
+        super::square_metres::to_hectares(to_square_metres(value))
     }
 }
 
 // Legacy function wrappers for backward compatibility
-pub fn square_meters_to_square_millimeters(square_meters: f64) -> f64 {
-    square_meters::to_square_millimeters(square_meters)
+pub fn square_metres_to_square_millimetres(square_metres: f64) -> f64 {
+    square_metres::to_square_millimetres(square_metres)
 }
 
-pub fn square_millimeters_to_square_meters(square_millimeters: f64) -> f64 {
-    square_millimeters::to_square_meters(square_millimeters)
+pub fn square_millimetres_to_square_metres(square_millimetres: f64) -> f64 {
+    square_millimetres::to_square_metres(square_millimetres)
 }
 
-pub fn square_meters_to_square_centimeters(square_meters: f64) -> f64 {
-    square_meters::to_square_centimeters(square_meters)
+pub fn square_metres_to_square_centimetres(square_metres: f64) -> f64 {
+    square_metres::to_square_centimetres(square_metres)
 }
 
-pub fn square_centimeters_to_square_meters(square_centimeters: f64) -> f64 {
-    square_centimeters::to_square_meters(square_centimeters)
+pub fn square_centimetres_to_square_metres(square_centimetres: f64) -> f64 {
+    square_centimetres::to_square_metres(square_centimetres)
 }
 
-pub fn square_meters_to_square_kilometers(square_meters: f64) -> f64 {
-    square_meters::to_square_kilometers(square_meters)
+pub fn square_metres_to_square_kilometres(square_metres: f64) -> f64 {
+    square_metres::to_square_kilometres(square_metres)
 }
 
-pub fn square_kilometers_to_square_meters(square_kilometers: f64) -> f64 {
-    square_kilometers::to_square_meters(square_kilometers)
+pub fn square_kilometres_to_square_metres(square_kilometres: f64) -> f64 {
+    square_kilometres::to_square_metres(square_kilometres)
 }
 
-pub fn square_meters_to_square_feet(square_meters: f64) -> f64 {
-    square_meters::to_square_feet(square_meters)
+pub fn square_metres_to_square_feet(square_metres: f64) -> f64 {
+    square_metres::to_square_feet(square_metres)
 }
 
-pub fn square_feet_to_square_meters(square_feet: f64) -> f64 {
-    square_feet::to_square_meters(square_feet)
+pub fn square_feet_to_square_metres(square_feet: f64) -> f64 {
+    square_feet::to_square_metres(square_feet)
 }
 
-pub fn square_meters_to_acres(square_meters: f64) -> f64 {
-    square_meters::to_acres(square_meters)
+pub fn square_metres_to_acres(square_metres: f64) -> f64 {
+    square_metres::to_acres(square_metres)
 }
 
-pub fn acres_to_square_meters(acres: f64) -> f64 {
-    acres::to_square_meters(acres)
+pub fn acres_to_square_metres(acres: f64) -> f64 {
+    acres::to_square_metres(acres)
 }
 
 /// General area conversion function that accepts string unit names
@@ -722,8 +722,8 @@ pub fn acres_to_square_meters(acres: f64) -> f64 {
 /// ```rust
 /// use conversions_rs::convert_area;
 ///
-/// let square_centimeters = convert_area(2.5, "m²", "cm²").unwrap();
-/// assert_eq!(square_centimeters, 25000.0);
+/// let square_centimetres = convert_area(2.5, "m²", "cm²").unwrap();
+/// assert_eq!(square_centimetres, 25000.0);
 ///
 /// let acres = convert_area(10000.0, "m²", "ac").unwrap();
 /// assert!((acres - 2.471).abs() < 0.001);
@@ -732,47 +732,47 @@ pub fn convert_area(value: f64, from_unit: &str, to_unit: &str) -> Result<f64, S
     let from_unit = from_unit.to_lowercase();
     let to_unit = to_unit.to_lowercase();
 
-    // Convert input to square meters first
-    let square_meters = match from_unit.as_str() {
-        "m²" | "m2" | "sq_m" | "square_meters" => value,
-        "mm²" | "mm2" | "sq_mm" | "square_millimeters" => {
-            square_millimeters::to_square_meters(value)
+    // Convert input to square metres first
+    let square_metres = match from_unit.as_str() {
+        "m²" | "m2" | "sq_m" | "square_metres" => value,
+        "mm²" | "mm2" | "sq_mm" | "square_millimetres" => {
+            square_millimetres::to_square_metres(value)
         }
-        "cm²" | "cm2" | "sq_cm" | "square_centimeters" => {
-            square_centimeters::to_square_meters(value)
+        "cm²" | "cm2" | "sq_cm" | "square_centimetres" => {
+            square_centimetres::to_square_metres(value)
         }
-        "km²" | "km2" | "sq_km" | "square_kilometers" => {
-            square_kilometers::to_square_meters(value)
+        "km²" | "km2" | "sq_km" | "square_kilometres" => {
+            square_kilometres::to_square_metres(value)
         }
-        "in²" | "in2" | "sq_in" | "square_inches" => square_inches::to_square_meters(value),
-        "ft²" | "ft2" | "sq_ft" | "square_feet" => square_feet::to_square_meters(value),
-        "yd²" | "yd2" | "sq_yd" | "square_yards" => square_yards::to_square_meters(value),
-        "ac" | "acre" | "acres" => acres::to_square_meters(value),
-        "ha" | "hectare" | "hectares" => hectares::to_square_meters(value),
-        "mi²" | "mi2" | "sq_mi" | "square_miles" => square_miles::to_square_meters(value),
+        "in²" | "in2" | "sq_in" | "square_inches" => square_inches::to_square_metres(value),
+        "ft²" | "ft2" | "sq_ft" | "square_feet" => square_feet::to_square_metres(value),
+        "yd²" | "yd2" | "sq_yd" | "square_yards" => square_yards::to_square_metres(value),
+        "ac" | "acre" | "acres" => acres::to_square_metres(value),
+        "ha" | "hectare" | "hectares" => hectares::to_square_metres(value),
+        "mi²" | "mi2" | "sq_mi" | "square_miles" => square_miles::to_square_metres(value),
         _ => return Err(format!("Unsupported area unit: {}", from_unit)),
     };
 
-    // Convert square meters to target unit
+    // Convert square metres to target unit
     let result = match to_unit.as_str() {
-        "m²" | "m2" | "sq_m" | "square_meters" => square_meters,
-        "mm²" | "mm2" | "sq_mm" | "square_millimeters" => {
-            square_meters::to_square_millimeters(square_meters)
+        "m²" | "m2" | "sq_m" | "square_metres" => square_metres,
+        "mm²" | "mm2" | "sq_mm" | "square_millimetres" => {
+            square_metres::to_square_millimetres(square_metres)
         }
-        "cm²" | "cm2" | "sq_cm" | "square_centimeters" => {
-            square_meters::to_square_centimeters(square_meters)
+        "cm²" | "cm2" | "sq_cm" | "square_centimetres" => {
+            square_metres::to_square_centimetres(square_metres)
         }
-        "km²" | "km2" | "sq_km" | "square_kilometers" => {
-            square_meters::to_square_kilometers(square_meters)
+        "km²" | "km2" | "sq_km" | "square_kilometres" => {
+            square_metres::to_square_kilometres(square_metres)
         }
         "in²" | "in2" | "sq_in" | "square_inches" => {
-            square_meters::to_square_inches(square_meters)
+            square_metres::to_square_inches(square_metres)
         }
-        "ft²" | "ft2" | "sq_ft" | "square_feet" => square_meters::to_square_feet(square_meters),
-        "yd²" | "yd2" | "sq_yd" | "square_yards" => square_meters::to_square_yards(square_meters),
-        "ac" | "acre" | "acres" => square_meters::to_acres(square_meters),
-        "ha" | "hectare" | "hectares" => square_meters::to_hectares(square_meters),
-        "mi²" | "mi2" | "sq_mi" | "square_miles" => square_meters::to_square_miles(square_meters),
+        "ft²" | "ft2" | "sq_ft" | "square_feet" => square_metres::to_square_feet(square_metres),
+        "yd²" | "yd2" | "sq_yd" | "square_yards" => square_metres::to_square_yards(square_metres),
+        "ac" | "acre" | "acres" => square_metres::to_acres(square_metres),
+        "ha" | "hectare" | "hectares" => square_metres::to_hectares(square_metres),
+        "mi²" | "mi2" | "sq_mi" | "square_miles" => square_metres::to_square_miles(square_metres),
         _ => return Err(format!("Unsupported area unit: {}", to_unit)),
     };
 

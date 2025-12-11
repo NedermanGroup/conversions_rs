@@ -1,53 +1,53 @@
 //! Length conversion functions organized by unit type
-//! All conversions use meters as the base unit for accuracy and consistency
+//! All conversions use metres as the base unit for accuracy and consistency
 
-/// Meter conversion functions
-pub mod meters {
-    /// Converts meters to feet.
+/// Metre conversion functions
+pub mod metres {
+    /// Converts metres to feet.
     /// # Arguments
-    /// * `value` - The length in meters to convert
+    /// * `value` - The length in metres to convert
     pub fn to_feet(value: f64) -> f64 {
         value * 3.28084
     }
 
-    /// Converts meters to inches.
+    /// Converts metres to inches.
     /// # Arguments
-    /// * `value` - The length in meters to convert
+    /// * `value` - The length in metres to convert
     pub fn to_inches(value: f64) -> f64 {
         value * 39.3701
     }
 
-    /// Converts meters to kilometers.
+    /// Converts metres to kilometres.
     /// # Arguments
-    /// * `value` - The length in meters to convert
-    pub fn to_kilometers(value: f64) -> f64 {
+    /// * `value` - The length in metres to convert
+    pub fn to_kilometres(value: f64) -> f64 {
         value / 1000.0
     }
 
-    /// Converts meters to centimeters.
+    /// Converts metres to centimetres.
     /// # Arguments
-    /// * `value` - The length in meters to convert
-    pub fn to_centimeters(value: f64) -> f64 {
+    /// * `value` - The length in metres to convert
+    pub fn to_centimetres(value: f64) -> f64 {
         value * 100.0
     }
 
-    /// Converts meters to millimeters.
+    /// Converts metres to millimetres.
     /// # Arguments
-    /// * `value` - The length in meters to convert
-    pub fn to_millimeters(value: f64) -> f64 {
+    /// * `value` - The length in metres to convert
+    pub fn to_millimetres(value: f64) -> f64 {
         value * 1000.0
     }
 
-    /// Converts meters to yards.
+    /// Converts metres to yards.
     /// # Arguments
-    /// * `value` - The length in meters to convert
+    /// * `value` - The length in metres to convert
     pub fn to_yards(value: f64) -> f64 {
         value * 1.09361
     }
 
-    /// Converts meters to miles.
+    /// Converts metres to miles.
     /// # Arguments
-    /// * `value` - The length in meters to convert
+    /// * `value` - The length in metres to convert
     pub fn to_miles(value: f64) -> f64 {
         value / 1609.34
     }
@@ -55,10 +55,10 @@ pub mod meters {
 
 /// Feet conversion functions
 pub mod feet {
-    /// Converts feet to meters.
+    /// Converts feet to metres.
     /// # Arguments
     /// * `value` - The length in feet to convert
-    pub fn to_meters(value: f64) -> f64 {
+    pub fn to_metres(value: f64) -> f64 {
         value / 3.28084
     }
 
@@ -83,34 +83,34 @@ pub mod feet {
         value / 5280.0
     }
 
-    /// Converts feet to centimeters.
+    /// Converts feet to centimetres.
     /// # Arguments
     /// * `value` - The length in feet to convert
-    pub fn to_centimeters(value: f64) -> f64 {
-        super::meters::to_centimeters(to_meters(value))
+    pub fn to_centimetres(value: f64) -> f64 {
+        super::metres::to_centimetres(to_metres(value))
     }
 
-    /// Converts feet to millimeters.
+    /// Converts feet to millimetres.
     /// # Arguments
     /// * `value` - The length in feet to convert
-    pub fn to_millimeters(value: f64) -> f64 {
-        super::meters::to_millimeters(to_meters(value))
+    pub fn to_millimetres(value: f64) -> f64 {
+        super::metres::to_millimetres(to_metres(value))
     }
 
-    /// Converts feet to kilometers.
+    /// Converts feet to kilometres.
     /// # Arguments
     /// * `value` - The length in feet to convert
-    pub fn to_kilometers(value: f64) -> f64 {
-        super::meters::to_kilometers(to_meters(value))
+    pub fn to_kilometres(value: f64) -> f64 {
+        super::metres::to_kilometres(to_metres(value))
     }
 }
 
 /// Inches conversion functions
 pub mod inches {
-    /// Converts inches to meters.
+    /// Converts inches to metres.
     /// # Arguments
     /// * `value` - The length in inches to convert
-    pub fn to_meters(value: f64) -> f64 {
+    pub fn to_metres(value: f64) -> f64 {
         value / 39.3701
     }
 
@@ -128,197 +128,197 @@ pub mod inches {
         value / 36.0
     }
 
-    /// Converts inches to centimeters.
+    /// Converts inches to centimetres.
     /// # Arguments
     /// * `value` - The length in inches to convert
-    pub fn to_centimeters(value: f64) -> f64 {
+    pub fn to_centimetres(value: f64) -> f64 {
         value * 2.54
     }
 
-    /// Converts inches to millimeters.
+    /// Converts inches to millimetres.
     /// # Arguments
     /// * `value` - The length in inches to convert
-    pub fn to_millimeters(value: f64) -> f64 {
+    pub fn to_millimetres(value: f64) -> f64 {
         value * 25.4
     }
 
-    /// Converts inches to kilometers.
+    /// Converts inches to kilometres.
     /// # Arguments
     /// * `value` - The length in inches to convert
-    pub fn to_kilometers(value: f64) -> f64 {
-        super::meters::to_kilometers(to_meters(value))
+    pub fn to_kilometres(value: f64) -> f64 {
+        super::metres::to_kilometres(to_metres(value))
     }
 
     /// Converts inches to miles.
     /// # Arguments
     /// * `value` - The length in inches to convert
     pub fn to_miles(value: f64) -> f64 {
-        super::meters::to_miles(to_meters(value))
+        super::metres::to_miles(to_metres(value))
     }
 }
 
-/// Kilometers conversion functions
-pub mod kilometers {
-    /// Converts kilometers to meters.
+/// Kilometres conversion functions
+pub mod kilometres {
+    /// Converts kilometres to metres.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
-    pub fn to_meters(value: f64) -> f64 {
+    /// * `value` - The length in kilometres to convert
+    pub fn to_metres(value: f64) -> f64 {
         value * 1000.0
     }
 
-    /// Converts kilometers to feet.
+    /// Converts kilometres to feet.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
+    /// * `value` - The length in kilometres to convert
     pub fn to_feet(value: f64) -> f64 {
-        super::meters::to_feet(to_meters(value))
+        super::metres::to_feet(to_metres(value))
     }
 
-    /// Converts kilometers to inches.
+    /// Converts kilometres to inches.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
+    /// * `value` - The length in kilometres to convert
     pub fn to_inches(value: f64) -> f64 {
-        super::meters::to_inches(to_meters(value))
+        super::metres::to_inches(to_metres(value))
     }
 
-    /// Converts kilometers to yards.
+    /// Converts kilometres to yards.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
+    /// * `value` - The length in kilometres to convert
     pub fn to_yards(value: f64) -> f64 {
-        super::meters::to_yards(to_meters(value))
+        super::metres::to_yards(to_metres(value))
     }
 
-    /// Converts kilometers to miles.
+    /// Converts kilometres to miles.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
+    /// * `value` - The length in kilometres to convert
     pub fn to_miles(value: f64) -> f64 {
         value / 1.60934
     }
 
-    /// Converts kilometers to centimeters.
+    /// Converts kilometres to centimetres.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
-    pub fn to_centimeters(value: f64) -> f64 {
+    /// * `value` - The length in kilometres to convert
+    pub fn to_centimetres(value: f64) -> f64 {
         value * 100000.0
     }
 
-    /// Converts kilometers to millimeters.
+    /// Converts kilometres to millimetres.
     /// # Arguments
-    /// * `value` - The length in kilometers to convert
-    pub fn to_millimeters(value: f64) -> f64 {
+    /// * `value` - The length in kilometres to convert
+    pub fn to_millimetres(value: f64) -> f64 {
         value * 1000000.0
     }
 }
 
-/// Centimeters conversion functions
-pub mod centimeters {
-    /// Converts centimeters to meters.
+/// Centimetres conversion functions
+pub mod centimetres {
+    /// Converts centimetres to metres.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
-    pub fn to_meters(value: f64) -> f64 {
+    /// * `value` - The length in centimetres to convert
+    pub fn to_metres(value: f64) -> f64 {
         value / 100.0
     }
 
-    /// Converts centimeters to feet.
+    /// Converts centimetres to feet.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
+    /// * `value` - The length in centimetres to convert
     pub fn to_feet(value: f64) -> f64 {
-        super::meters::to_feet(to_meters(value))
+        super::metres::to_feet(to_metres(value))
     }
 
-    /// Converts centimeters to inches.
+    /// Converts centimetres to inches.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
+    /// * `value` - The length in centimetres to convert
     pub fn to_inches(value: f64) -> f64 {
         value / 2.54
     }
 
-    /// Converts centimeters to yards.
+    /// Converts centimetres to yards.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
+    /// * `value` - The length in centimetres to convert
     pub fn to_yards(value: f64) -> f64 {
-        super::meters::to_yards(to_meters(value))
+        super::metres::to_yards(to_metres(value))
     }
 
-    /// Converts centimeters to miles.
+    /// Converts centimetres to miles.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
+    /// * `value` - The length in centimetres to convert
     pub fn to_miles(value: f64) -> f64 {
-        super::meters::to_miles(to_meters(value))
+        super::metres::to_miles(to_metres(value))
     }
 
-    /// Converts centimeters to kilometers.
+    /// Converts centimetres to kilometres.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
-    pub fn to_kilometers(value: f64) -> f64 {
+    /// * `value` - The length in centimetres to convert
+    pub fn to_kilometres(value: f64) -> f64 {
         value / 100000.0
     }
 
-    /// Converts centimeters to millimeters.
+    /// Converts centimetres to millimetres.
     /// # Arguments
-    /// * `value` - The length in centimeters to convert
-    pub fn to_millimeters(value: f64) -> f64 {
+    /// * `value` - The length in centimetres to convert
+    pub fn to_millimetres(value: f64) -> f64 {
         value * 10.0
     }
 }
 
-/// Millimeters conversion functions
-pub mod millimeters {
-    /// Converts millimeters to meters.
+/// Millimetres conversion functions
+pub mod millimetres {
+    /// Converts millimetres to metres.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
-    pub fn to_meters(value: f64) -> f64 {
+    /// * `value` - The length in millimetres to convert
+    pub fn to_metres(value: f64) -> f64 {
         value / 1000.0
     }
 
-    /// Converts millimeters to feet.
+    /// Converts millimetres to feet.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
+    /// * `value` - The length in millimetres to convert
     pub fn to_feet(value: f64) -> f64 {
-        super::meters::to_feet(to_meters(value))
+        super::metres::to_feet(to_metres(value))
     }
 
-    /// Converts millimeters to inches.
+    /// Converts millimetres to inches.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
+    /// * `value` - The length in millimetres to convert
     pub fn to_inches(value: f64) -> f64 {
         value / 25.4
     }
 
-    /// Converts millimeters to yards.
+    /// Converts millimetres to yards.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
+    /// * `value` - The length in millimetres to convert
     pub fn to_yards(value: f64) -> f64 {
-        super::meters::to_yards(to_meters(value))
+        super::metres::to_yards(to_metres(value))
     }
 
-    /// Converts millimeters to miles.
+    /// Converts millimetres to miles.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
+    /// * `value` - The length in millimetres to convert
     pub fn to_miles(value: f64) -> f64 {
-        super::meters::to_miles(to_meters(value))
+        super::metres::to_miles(to_metres(value))
     }
 
-    /// Converts millimeters to kilometers.
+    /// Converts millimetres to kilometres.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
-    pub fn to_kilometers(value: f64) -> f64 {
+    /// * `value` - The length in millimetres to convert
+    pub fn to_kilometres(value: f64) -> f64 {
         value / 1000000.0
     }
 
-    /// Converts millimeters to centimeters.
+    /// Converts millimetres to centimetres.
     /// # Arguments
-    /// * `value` - The length in millimeters to convert
-    pub fn to_centimeters(value: f64) -> f64 {
+    /// * `value` - The length in millimetres to convert
+    pub fn to_centimetres(value: f64) -> f64 {
         value / 10.0
     }
 }
 
 /// Yards conversion functions
 pub mod yards {
-    /// Converts yards to meters.
+    /// Converts yards to metres.
     /// # Arguments
     /// * `value` - The length in yards to convert
-    pub fn to_meters(value: f64) -> f64 {
+    pub fn to_metres(value: f64) -> f64 {
         value / 1.09361
     }
 
@@ -343,34 +343,34 @@ pub mod yards {
         value / 1760.0
     }
 
-    /// Converts yards to kilometers.
+    /// Converts yards to kilometres.
     /// # Arguments
     /// * `value` - The length in yards to convert
-    pub fn to_kilometers(value: f64) -> f64 {
-        super::meters::to_kilometers(to_meters(value))
+    pub fn to_kilometres(value: f64) -> f64 {
+        super::metres::to_kilometres(to_metres(value))
     }
 
-    /// Converts yards to centimeters.
+    /// Converts yards to centimetres.
     /// # Arguments
     /// * `value` - The length in yards to convert
-    pub fn to_centimeters(value: f64) -> f64 {
-        super::meters::to_centimeters(to_meters(value))
+    pub fn to_centimetres(value: f64) -> f64 {
+        super::metres::to_centimetres(to_metres(value))
     }
 
-    /// Converts yards to millimeters.
+    /// Converts yards to millimetres.
     /// # Arguments
     /// * `value` - The length in yards to convert
-    pub fn to_millimeters(value: f64) -> f64 {
-        super::meters::to_millimeters(to_meters(value))
+    pub fn to_millimetres(value: f64) -> f64 {
+        super::metres::to_millimetres(to_metres(value))
     }
 }
 
 /// Miles conversion functions
 pub mod miles {
-    /// Converts miles to meters.
+    /// Converts miles to metres.
     /// # Arguments
     /// * `value` - The length in miles to convert
-    pub fn to_meters(value: f64) -> f64 {
+    pub fn to_metres(value: f64) -> f64 {
         value * 1609.34
     }
 
@@ -395,179 +395,179 @@ pub mod miles {
         value * 1760.0
     }
 
-    /// Converts miles to kilometers.
+    /// Converts miles to kilometres.
     /// # Arguments
     /// * `value` - The length in miles to convert
-    pub fn to_kilometers(value: f64) -> f64 {
+    pub fn to_kilometres(value: f64) -> f64 {
         value * 1.60934
     }
 
-    /// Converts miles to centimeters.
+    /// Converts miles to centimetres.
     /// # Arguments
     /// * `value` - The length in miles to convert
-    pub fn to_centimeters(value: f64) -> f64 {
-        super::meters::to_centimeters(to_meters(value))
+    pub fn to_centimetres(value: f64) -> f64 {
+        super::metres::to_centimetres(to_metres(value))
     }
 
-    /// Converts miles to millimeters.
+    /// Converts miles to millimetres.
     /// # Arguments
     /// * `value` - The length in miles to convert
-    pub fn to_millimeters(value: f64) -> f64 {
-        super::meters::to_millimeters(to_meters(value))
+    pub fn to_millimetres(value: f64) -> f64 {
+        super::metres::to_millimetres(to_metres(value))
     }
 }
 
 // Legacy function wrappers for backward compatibility
-/// Converts meters to feet (legacy function).
+/// Converts metres to feet (legacy function).
 ///
-/// **Note:** Consider using `meters::to_feet()` for better organization.
+/// **Note:** Consider using `metres::to_feet()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_feet(meters: f64) -> f64 {
-    meters::to_feet(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_feet(metres: f64) -> f64 {
+    metres::to_feet(metres)
 }
 
-/// Converts feet to meters (legacy function).
+/// Converts feet to metres (legacy function).
 ///
-/// **Note:** Consider using `feet::to_meters()` for better organization.
+/// **Note:** Consider using `feet::to_metres()` for better organization.
 ///
 /// # Arguments
 /// * `feet` - The length in feet to convert
-pub fn feet_to_meters(feet: f64) -> f64 {
-    feet::to_meters(feet)
+pub fn feet_to_metres(feet: f64) -> f64 {
+    feet::to_metres(feet)
 }
 
-/// Converts meters to inches (legacy function).
+/// Converts metres to inches (legacy function).
 ///
-/// **Note:** Consider using `meters::to_inches()` for better organization.
+/// **Note:** Consider using `metres::to_inches()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_inches(meters: f64) -> f64 {
-    meters::to_inches(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_inches(metres: f64) -> f64 {
+    metres::to_inches(metres)
 }
 
-/// Converts inches to meters (legacy function).
+/// Converts inches to metres (legacy function).
 ///
-/// **Note:** Consider using `inches::to_meters()` for better organization.
+/// **Note:** Consider using `inches::to_metres()` for better organization.
 ///
 /// # Arguments
 /// * `inches` - The length in inches to convert
-pub fn inches_to_meters(inches: f64) -> f64 {
-    inches::to_meters(inches)
+pub fn inches_to_metres(inches: f64) -> f64 {
+    inches::to_metres(inches)
 }
 
-/// Converts meters to kilometers (legacy function).
+/// Converts metres to kilometres (legacy function).
 ///
-/// **Note:** Consider using `meters::to_kilometers()` for better organization.
+/// **Note:** Consider using `metres::to_kilometres()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_kilometers(meters: f64) -> f64 {
-    meters::to_kilometers(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_kilometres(metres: f64) -> f64 {
+    metres::to_kilometres(metres)
 }
 
-/// Converts kilometers to meters (legacy function).
+/// Converts kilometres to metres (legacy function).
 ///
-/// **Note:** Consider using `kilometers::to_meters()` for better organization.
+/// **Note:** Consider using `kilometres::to_metres()` for better organization.
 ///
 /// # Arguments
-/// * `kilometers` - The length in kilometers to convert
-pub fn kilometers_to_meters(kilometers: f64) -> f64 {
-    kilometers::to_meters(kilometers)
+/// * `kilometres` - The length in kilometres to convert
+pub fn kilometres_to_metres(kilometres: f64) -> f64 {
+    kilometres::to_metres(kilometres)
 }
 
-/// Converts meters to centimeters (legacy function).
+/// Converts metres to centimetres (legacy function).
 ///
-/// **Note:** Consider using `meters::to_centimeters()` for better organization.
+/// **Note:** Consider using `metres::to_centimetres()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_centimeters(meters: f64) -> f64 {
-    meters::to_centimeters(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_centimetres(metres: f64) -> f64 {
+    metres::to_centimetres(metres)
 }
 
-/// Converts centimeters to meters (legacy function).
+/// Converts centimetres to metres (legacy function).
 ///
-/// **Note:** Consider using `centimeters::to_meters()` for better organization.
+/// **Note:** Consider using `centimetres::to_metres()` for better organization.
 ///
 /// # Arguments
-/// * `centimeters` - The length in centimeters to convert
-pub fn centimeters_to_meters(centimeters: f64) -> f64 {
-    centimeters::to_meters(centimeters)
+/// * `centimetres` - The length in centimetres to convert
+pub fn centimetres_to_metres(centimetres: f64) -> f64 {
+    centimetres::to_metres(centimetres)
 }
 
-/// Converts meters to millimeters (legacy function).
+/// Converts metres to millimetres (legacy function).
 ///
-/// **Note:** Consider using `meters::to_millimeters()` for better organization.
+/// **Note:** Consider using `metres::to_millimetres()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_millimeters(meters: f64) -> f64 {
-    meters::to_millimeters(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_millimetres(metres: f64) -> f64 {
+    metres::to_millimetres(metres)
 }
 
-/// Converts millimeters to meters (legacy function).
+/// Converts millimetres to metres (legacy function).
 ///
-/// **Note:** Consider using `millimeters::to_meters()` for better organization.
+/// **Note:** Consider using `millimetres::to_metres()` for better organization.
 ///
 /// # Arguments
-/// * `millimeters` - The length in millimeters to convert
-pub fn millimeters_to_meters(millimeters: f64) -> f64 {
-    millimeters::to_meters(millimeters)
+/// * `millimetres` - The length in millimetres to convert
+pub fn millimetres_to_metres(millimetres: f64) -> f64 {
+    millimetres::to_metres(millimetres)
 }
 
-/// Converts meters to yards (legacy function).
+/// Converts metres to yards (legacy function).
 ///
-/// **Note:** Consider using `meters::to_yards()` for better organization.
+/// **Note:** Consider using `metres::to_yards()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_yards(meters: f64) -> f64 {
-    meters::to_yards(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_yards(metres: f64) -> f64 {
+    metres::to_yards(metres)
 }
 
-/// Converts yards to meters (legacy function).
+/// Converts yards to metres (legacy function).
 ///
-/// **Note:** Consider using `yards::to_meters()` for better organization.
+/// **Note:** Consider using `yards::to_metres()` for better organization.
 ///
 /// # Arguments
 /// * `yards` - The length in yards to convert
-pub fn yards_to_meters(yards: f64) -> f64 {
-    yards::to_meters(yards)
+pub fn yards_to_metres(yards: f64) -> f64 {
+    yards::to_metres(yards)
 }
 
-/// Converts meters to miles (legacy function).
+/// Converts metres to miles (legacy function).
 ///
-/// **Note:** Consider using `meters::to_miles()` for better organization.
+/// **Note:** Consider using `metres::to_miles()` for better organization.
 ///
 /// # Arguments
-/// * `meters` - The length in meters to convert
-pub fn meters_to_miles(meters: f64) -> f64 {
-    meters::to_miles(meters)
+/// * `metres` - The length in metres to convert
+pub fn metres_to_miles(metres: f64) -> f64 {
+    metres::to_miles(metres)
 }
 
-/// Converts miles to meters (legacy function).
+/// Converts miles to metres (legacy function).
 ///
-/// **Note:** Consider using `miles::to_meters()` for better organization.
+/// **Note:** Consider using `miles::to_metres()` for better organization.
 ///
 /// # Arguments
 /// * `miles` - The length in miles to convert
-pub fn miles_to_meters(miles: f64) -> f64 {
-    miles::to_meters(miles)
+pub fn miles_to_metres(miles: f64) -> f64 {
+    miles::to_metres(miles)
 }
 
 /// Converts between any two supported length units.
 ///
 /// This is the main conversion function that can handle conversions between any
-/// combination of supported length units. All conversions are done through meters
+/// combination of supported length units. All conversions are done through metres
 /// as an intermediate base unit to ensure accuracy and consistency.
 ///
 /// # Supported Units
 ///
-/// * **Metric:** `m`, `meter`, `meters`, `km`, `kilometer`, `kilometers`,
-///   `cm`, `centimeter`, `centimeters`, `mm`, `millimeter`, `millimeters`
+/// * **Metric:** `m`, `metre`, `metres`, `km`, `kilometre`, `kilometres`,
+///   `cm`, `centimetre`, `centimetres`, `mm`, `millimetre`, `millimetres`
 /// * **Imperial:** `ft`, `foot`, `feet`, `in`, `inch`, `inches`,
 ///   `yd`, `yard`, `yards`, `mi`, `mile`, `miles`
 ///
@@ -588,20 +588,20 @@ pub fn miles_to_meters(miles: f64) -> f64 {
 /// ```
 /// use conversions_rs::convert_length;
 ///
-/// // Convert 100 feet to meters
+/// // Convert 100 feet to metres
 /// let result = convert_length(100.0, "ft", "m").unwrap();
 /// assert!((result - 30.48).abs() < 0.01);
 ///
-/// // Convert 5 kilometers to miles
+/// // Convert 5 kilometres to miles
 /// let result = convert_length(5.0, "km", "mi").unwrap();
 /// assert!((result - 3.10686).abs() < 0.001);
 ///
-/// // Convert 42 inches to centimeters
+/// // Convert 42 inches to centimetres
 /// let result = convert_length(42.0, "in", "cm").unwrap();
 /// assert!((result - 106.68).abs() < 0.01);
 ///
 /// // Case-insensitive and plural forms work
-/// let result = convert_length(1.0, "METER", "feet").unwrap();
+/// let result = convert_length(1.0, "Metre", "feet").unwrap();
 /// assert!((result - 3.28084).abs() < 0.0001);
 ///
 /// // Error handling for unknown units
@@ -611,36 +611,36 @@ pub fn miles_to_meters(miles: f64) -> f64 {
 /// # Conversion Accuracy
 ///
 /// All conversions use standard international conversion factors:
-/// - 1 meter = 3.28084 feet
-/// - 1 meter = 39.3701 inches  
-/// - 1 mile = 1609.34 meters
+/// - 1 metre = 3.28084 feet
+/// - 1 metre = 39.3701 inches  
+/// - 1 mile = 1609.34 metres
 /// - etc.
 ///
 /// Results maintain high precision suitable for most applications.
 pub fn convert_length(value: f64, from: &str, to: &str) -> Result<f64, String> {
-    // First convert to meters (base unit)
-    let meters = match from.to_lowercase().as_str() {
-        "m" | "meter" | "meters" => value,
-        "km" | "kilometer" | "kilometers" => kilometers_to_meters(value),
-        "cm" | "centimeter" | "centimeters" => centimeters_to_meters(value),
-        "mm" | "millimeter" | "millimeters" => millimeters_to_meters(value),
-        "ft" | "foot" | "feet" => feet_to_meters(value),
-        "in" | "inch" | "inches" => inches_to_meters(value),
-        "yd" | "yard" | "yards" => yards_to_meters(value),
-        "mi" | "mile" | "miles" => miles_to_meters(value),
+    // First convert to metres (base unit)
+    let metres = match from.to_lowercase().as_str() {
+        "m" | "metre" | "metres" => value,
+        "km" | "kilometre" | "kilometres" => kilometres_to_metres(value),
+        "cm" | "centimetre" | "centimetres" => centimetres_to_metres(value),
+        "mm" | "millimetre" | "millimetres" => millimetres_to_metres(value),
+        "ft" | "foot" | "feet" => feet_to_metres(value),
+        "in" | "inch" | "inches" => inches_to_metres(value),
+        "yd" | "yard" | "yards" => yards_to_metres(value),
+        "mi" | "mile" | "miles" => miles_to_metres(value),
         _ => return Err(format!("Unknown length unit: {}", from)),
     };
 
-    // Then convert from meters to target unit
+    // Then convert from metres to target unit
     let result = match to.to_lowercase().as_str() {
-        "m" | "meter" | "meters" => meters,
-        "km" | "kilometer" | "kilometers" => meters_to_kilometers(meters),
-        "cm" | "centimeter" | "centimeters" => meters_to_centimeters(meters),
-        "mm" | "millimeter" | "millimeters" => meters_to_millimeters(meters),
-        "ft" | "foot" | "feet" => meters_to_feet(meters),
-        "in" | "inch" | "inches" => meters_to_inches(meters),
-        "yd" | "yard" | "yards" => meters_to_yards(meters),
-        "mi" | "mile" | "miles" => meters_to_miles(meters),
+        "m" | "metre" | "metres" => metres,
+        "km" | "kilometre" | "kilometres" => metres_to_kilometres(metres),
+        "cm" | "centimetre" | "centimetres" => metres_to_centimetres(metres),
+        "mm" | "millimetre" | "millimetres" => metres_to_millimetres(metres),
+        "ft" | "foot" | "feet" => metres_to_feet(metres),
+        "in" | "inch" | "inches" => metres_to_inches(metres),
+        "yd" | "yard" | "yards" => metres_to_yards(metres),
+        "mi" | "mile" | "miles" => metres_to_miles(metres),
         _ => return Err(format!("Unknown length unit: {}", to)),
     };
 

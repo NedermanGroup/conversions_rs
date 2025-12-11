@@ -13,7 +13,7 @@
 //! use conversions_rs::*;
 //!
 //! // Using specific functions
-//! let feet = meters_to_feet(10.0);
+//! let feet = metres_to_feet(10.0);
 //! let pounds = kilograms_to_pounds(5.0);
 //!
 //! // Using general conversion functions
@@ -31,7 +31,7 @@
 //! # Modules
 //!
 //! ## SI Base Units
-//! * [`length`] - Length and distance conversions (meters, feet, inches, etc.)
+//! * [`length`] - Length and distance conversions (metres, feet, inches, etc.)
 //! * [`weight`] - Weight and mass conversions (kilograms, pounds, ounces, etc.)
 //! * [`temperature`] - Temperature conversions (Celsius, Fahrenheit, Kelvin)
 //! * [`time`] - Time conversions (seconds, minutes, hours, days, etc.)
@@ -41,7 +41,7 @@
 //!
 //! ## SI Derived Units
 //! * [`volume`] - Volume conversions (liters, gallons, cups, etc.)
-//! * [`area`] - Area conversions (square meters, acres, hectares, etc.)
+//! * [`area`] - Area conversions (square metres, acres, hectares, etc.)
 
 pub mod area;
 pub mod current;

@@ -47,7 +47,7 @@ conversions_rs = "1.1.0"
 ✨ **Multi-Platform Support**: Command-line tool, Rust library, and WebAssembly module for web browsers
 
 ### SI Base Units
-- **Length Conversions**: meters, kilometers, centimeters, millimeters, feet, inches, yards, miles
+- **Length Conversions**: metres, kilometres, centimetres, millimetres, feet, inches, yards, miles
 - **Mass Conversions**: kilograms, grams, pounds, ounces, tons, stones  
 - **Temperature Conversions**: Celsius, Fahrenheit, Kelvin
 - **Time Conversions**: seconds, minutes, hours, days, weeks, years, milliseconds, microseconds, nanoseconds
@@ -57,7 +57,7 @@ conversions_rs = "1.1.0"
 
 ### SI Derived Units
 - **Volume Conversions**: liters, milliliters, gallons (US/UK), fluid ounces (US/UK), cups, pints, quarts
-- **Area Conversions**: square meters, square centimeters, square kilometers, square feet, square inches, acres, hectares
+- **Area Conversions**: square metres, square centimetres, square kilometres, square feet, square inches, acres, hectares
 
 ## Usage
 
@@ -67,7 +67,7 @@ You can use the app directly from the command line for quick conversions:
 
 ```bash
 # SI Base Units
-conversions_rs length 100 ft m          # 100 feet to meters
+conversions_rs length 100 ft m          # 100 feet to metres
 conversions_rs weight 10 kg lb          # 10 kilograms to pounds  
 conversions_rs temperature 32 F C       # 32°F to Celsius
 conversions_rs time 3600 s min          # 3600 seconds to minutes
@@ -77,7 +77,7 @@ conversions_rs luminosity 2.5 cd mcd    # 2.5 candela to millicandela
 
 # SI Derived Units  
 conversions_rs volume 1 gal l           # 1 gallon to liters
-conversions_rs area 10000 "m²" ha       # 10000 square meters to hectares
+conversions_rs area 10000 "m²" ha       # 10000 square metres to hectares
 ```
 
 **Get help:**
@@ -154,8 +154,8 @@ You can use the conversion functions directly in your Rust code in multiple ways
 use conversions_rs::*;
 
 // Length conversion
-let meters = convert_length(100.0, "ft", "m").unwrap();
-println!("{} meters", meters); // 30.48 meters
+let metres = convert_length(100.0, "ft", "m").unwrap();
+println!("{} metres", metres); // 30.48 metres
 
 // Temperature conversion
 let fahrenheit = convert_temperature(0.0, "C", "F").unwrap();
@@ -175,13 +175,13 @@ println!("{} ml", milliliters); // 3785.41 ml
 use conversions_rs::conversions::length::*;
 
 // Using the modular API - more organized and discoverable
-let feet = meters::to_feet(10.0);           // 32.8084 feet
+let feet = metres::to_feet(10.0);           // 32.8084 feet
 let inches = feet::to_inches(5.0);          // 60.0 inches
-let cm = inches::to_centimeters(12.0);      // 30.48 cm
-let km = miles::to_kilometers(5.0);         // 8.0467 km
+let cm = inches::to_centimetres(12.0);      // 30.48 cm
+let km = miles::to_kilometres(5.0);         // 8.0467 km
 
 // Chain conversions easily
-let result = meters::to_feet(kilometers::to_meters(1.0)); // 1 km to feet
+let result = metres::to_feet(kilometres::to_metres(1.0)); // 1 km to feet
 ```
 
 #### Legacy Functions (Backward compatibility)
@@ -189,7 +189,7 @@ let result = meters::to_feet(kilometers::to_meters(1.0)); // 1 km to feet
 use conversions_rs::*;
 
 // Traditional function names still work
-let feet = meters_to_feet(10.0);
+let feet = metres_to_feet(10.0);
 let kg = pounds_to_kilograms(22.0);
 let fahrenheit = celsius_to_fahrenheit(25.0);
 let ml = liters_to_milliliters(2.5);
@@ -244,7 +244,7 @@ await init();
 // Perform conversions
 const lengthResult = convert_length_wasm(100, "ft", "m");
 if (lengthResult.success) {
-    console.log(`100 feet = ${lengthResult.value} meters`);
+    console.log(`100 feet = ${lengthResult.value} metres`);
 } else {
     console.error("Conversion failed:", lengthResult.error);
 }
@@ -300,7 +300,7 @@ function Converter() {
     };
 
     return wasmReady ? (
-        <button onClick={handleConvert}>Convert 100ft to meters</button>
+        <button onClick={handleConvert}>Convert 100ft to metres</button>
     ) : (
         <div>Loading WASM...</div>
     );
@@ -312,7 +312,7 @@ function Converter() {
 const { convert_length_wasm } = require('./pkg/nodejs/conversions_rs.js');
 
 const result = convert_length_wasm(100, "ft", "m");
-console.log(`100 feet = ${result.value} meters`);
+console.log(`100 feet = ${result.value} metres`);
 ```
 
 #### Browser Support
@@ -328,10 +328,10 @@ For older browsers, consider using a WebAssembly polyfill.
 ## Supported Units
 
 ### Length
-- `m`, `meter`, `meters` - Meters
-- `km`, `kilometer`, `kilometers` - Kilometers
-- `cm`, `centimeter`, `centimeters` - Centimeters
-- `mm`, `millimeter`, `millimeters` - Millimeters
+- `m`, `metre`, `metres` - Metres
+- `km`, `kilometre`, `kilometres` - Kilometres
+- `cm`, `centimetre`, `centimetres` - Centimetres
+- `mm`, `millimetre`, `millimetres` - Millimetres
 - `ft`, `foot`, `feet` - Feet
 - `in`, `inch`, `inches` - Inches
 - `yd`, `yard`, `yards` - Yards
@@ -402,11 +402,11 @@ You can use Conversions RS as a library in your Rust projects:
 use conversions_rs::conversions::length;
 
 fn main() {
-    let meters = length::feet_to_meters(100.0);
-    println!("100 feet = {} meters", meters);
+    let metres = length::feet_to_metres(100.0);
+    println!("100 feet = {} metres", metres);
     
-    let feet = length::meters_to_feet(30.48);
-    println!("30.48 meters = {} feet", feet);
+    let feet = length::metres_to_feet(30.48);
+    println!("30.48 metres = {} feet", feet);
 }
 ```
 
